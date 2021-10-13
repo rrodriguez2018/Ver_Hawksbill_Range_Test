@@ -124,15 +124,15 @@ def closeDIValve():
     automationhat.relay.three.off()
 
 def readCond():
-    """read ADC input one, 9900 mA loop with 2850, and convert to uS/cm."""  
+    """read ADC input one, 8860 loop, and convert to uS/cm, based on 750Ohm @ 24V supply"""  
     cond = automationhat.analog.one.read()
-    uS = ((cond - 3) * 16.666)
+    uS = ((cond - 3)/15 * 250) + 0.718
     return uS
 
 def read_ADC2_Cond():
-    """read ADC input two, 8860 mA loop , and convert to uS/cm."""  
+    """read ADC input two, E+H Reference loop , and convert to uS/cm, based on 500 Ohm @ 24V supply"""  
     cond = automationhat.analog.two.read()
-    uS = ((cond - 3) * 16.666)
+    uS = ((cond - 2)/10 * 150) - 0.19
     return uS
 
 def is_Emergency():
