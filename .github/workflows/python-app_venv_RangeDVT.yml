@@ -19,9 +19,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: create virtual environment
+    - name: activate virtual environment
       run: |
-        python3 -m venv RangeDVT
         source RangeDVT /bin/activate
         
     - name: Run the DVT
