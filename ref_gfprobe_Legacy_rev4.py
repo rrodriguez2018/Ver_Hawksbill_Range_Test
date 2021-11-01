@@ -146,4 +146,4 @@ time.sleep(2)
 #Turn Pump OFF
 pi.powerDownPumps()
 time.sleep(3)
-print("Test completed!")
+print("Cycle completed!")
