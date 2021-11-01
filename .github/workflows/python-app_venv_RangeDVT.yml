@@ -25,4 +25,5 @@ jobs:
         
     - name: Run the DVT
       run: |
-        python3 EHref_gfprobe_tet_rev3.py
+        #python3 EHref_gfprobe_tet_rev3.py
+        python3 ref_gfprobe_Legacy_rev4.py
